@@ -1,0 +1,61 @@
+# This repo documents the YAMS arr stack only — everything below is either
+# personal media, live secrets, or stateful per-service data that shouldn't
+# be committed.
+
+# ---- Personal media libraries (MEDIA_DIRECTORY) ----
+# Contents are ignored, but .gitkeep placeholders keep the folder structure
+# tracked so a fresh clone recreates the layout the stack expects.
+/movies/*
+!/movies/.gitkeep
+/tvshows/*
+!/tvshows/.gitkeep
+/music/*
+!/music/.gitkeep
+/photos/*
+!/photos/.gitkeep
+/books/*
+!/books/.gitkeep
+
+# ---- Download / working directories ----
+/downloads/*
+!/downloads/.gitkeep
+/blackhole/*
+!/blackhole/.gitkeep
+/data/*
+!/data/.gitkeep
+
+# ---- Live secrets ----
+.env
+
+# ---- Stateful per-service config (databases, config.xml, API keys, logs) ----
+/config/yams/config/
+/config/yams/autobrr/*
+!/config/yams/autobrr/.gitkeep
+/config/portainer/data/*
+!/config/portainer/data/.gitkeep
+
+# ---- Standalone SFTPGo instance (host keys, sqlite db) ----
+/sftpgo/config/*
+!/sftpgo/config/.gitkeep
+/sftpgo/data/*
+!/sftpgo/data/.gitkeep
+
+# ---- Personal home dotfiles / caches (this repo lives in $HOME) ----
+/.bash_history
+/.bashrc
+/.cache/
+/.claude.json
+/.claude/
+/.config/
+/.docker/
+/.gitconfig
+/.lesshst
+/.local/
+/.npm/
+/.opencode/
+/.ssh/
+/.sudo_as_admin_successful
+/.vim/
+/.viminfo
+/.wget-hsts
+/.Xauthority

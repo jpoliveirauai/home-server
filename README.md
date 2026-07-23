@@ -1,25 +1,31 @@
 # home-server
-Repository made to document what and how I created my personal home server
 
-## Install directly
-* Webmin
-* Recalbox
-* OliveTin
-* Portainer
+Repository documenting the *arr stack ("YAMS") running on my self-hosted media
+server, managed with Docker and [Portainer](https://www.portainer.io/). This repo
+tracks the stack definitions only — personal media libraries and secrets are
+excluded (see [`.gitignore`](.gitignore)).
 
-## Install contenerised
-* Conteinerised don't starve server
-* qBittorrent
-* NextCloud
-* Emby
-* Pihole
-* VPN (TBD)
-* Kodi
-* Airsonic (music server)
+## Stack
 
-## Features
-* Conteinerised don't starve server
-  * docker run -v ${HOME}/:/data -p 10999-11000:10999-11000/udp -p 12346-12347:12346-12347/udp -e "DST_SERVER_ARCH=amd64" --restart=always --name dont-starve-together -d jamesits/dst-server:latest
-* Start and stop don't starve server
-* Back up don't starve server
-* Enable/disable GUI: Using OliveTin
+Managed via `docker compose`, with [Portainer](https://www.portainer.io/) for
+day-to-day container management/inspection.
+
+* Prowlarr — indexer aggregator
+* Sonarr / Radarr / Lidarr — TV / Movies / Music automation
+* qBittorrent / SABnzbd — torrent / NZB download clients (routed through a VPN via
+  gluetun)
+* slskd + soularr — Soulseek source for Lidarr
+* Bazarr — subtitles
+* Plex — media server
+* Portainer — container management UI
+* Watchtower — automatic image updates
+
+See [`docs/architecture.md`](docs/architecture.md) for the full service data flow,
+repo layout, and stack lifecycle commands.
+
+## Docs
+
+* [`docs/architecture.md`](docs/architecture.md) — service architecture, repo
+  layout, lifecycle commands
+* [`yams_services.txt`](yams_services.txt) — quick reference of service URLs on the
+  LAN

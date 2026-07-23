@@ -1,0 +1,10 @@
+Service URLs:
+SABnzbd: http://192.168.1.7:8080/
+Portainer: http://192.168.1.7:9000/
+Bazarr: http://192.168.1.7:6767/
+plex: http://192.168.1.7:32400/web
+Radarr: http://192.168.1.7:7878/
+Sonarr: http://192.168.1.7:8989/
+Prowlarr: http://192.168.1.7:9696/
+qBittorrent: http://192.168.1.7:8081/
+Lidarr: http://192.168.1.7:8686/
